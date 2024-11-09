@@ -1,5 +1,8 @@
-const separator = "=>"
-const header = "dcj"
+// can change.
+const separator = "=>" // separator, use to define the split of each element.
+const header = "dcj" // header, this is use for this library to detect which class name is dynamic.
+
+// can't change because it will make this library unable to work.
 const header_pos = 0
 const elements_pos = 1
 const header_element = 3
@@ -27,8 +30,7 @@ function decode_class_name(class_name){
 // check class is exist or not
 function check_class_is_exist(class_name){
 	let get_element_by_class = document.getElementsByClassName(class_name);
-	return (get_element_by_class.length 
-		>= 1 ? true: false);
+	return (get_element_by_class.length >= 1 ? true: false);
 }
 
 // auto router function
@@ -78,8 +80,8 @@ function CssMultipleInput(class_element, list_data){
 			}
 		}
 	}
-	console.log(data_string);
+	// console.log(data_string);
 	class_element.style[list_data[elements_pos]] = data_string;
 }
 
-main();
+main(); // main function
